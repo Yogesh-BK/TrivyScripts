@@ -6,14 +6,14 @@ for d in */
 do
     dirs[i++]="${d%/}"
 done
-echo "There are ${#dirs[@]} dirs in the current path"
+echo "There are ${#dirs[@]} dirs that needs to be scanned"
 for((i=1;i<=${#dirs[@]};i++))
 do
     echo "Inside $i.${dirs[i]}"
     echo "Started Scanning  $i.${dirs[i]}"
     TARGET_PATH="./${dirs[i]}"
     echo $TARGET_PATH
-    # trivy fs --exit-code 1 $TARGET_PATH
+    trivy fs --exit-code 1 $TARGET_PATH
     echo "Completed Scanning $i.${dirs[i]}"
 done
 # TARGET_PATHS=("$@")
