@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 echo "Welcome Yogesh"
 declare -a dirs
 i=1
