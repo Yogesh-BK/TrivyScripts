@@ -12,7 +12,6 @@ for((i=1;i<=${#dirs[@]};i++))
 do
     echo "Started Scanning  $i.${dirs[i]}"
     TARGET_PATH="./${dirs[i]}"
-    Gitleaks test
     trivy fs --exit-code 1 "$TARGET_PATH"
     echo "Completed Scanning $i.${dirs[i]}"
 done
