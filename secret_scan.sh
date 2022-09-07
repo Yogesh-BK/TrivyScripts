@@ -1,6 +1,9 @@
 #!/bin/bash
 echo "Welcome Yogesh"
 TARGET_PATHS=("$@")
+if [ -z "$TARGET_PATHS" ]; then
+    TARGET_PATHS=(".")
+fi
 for TARGET_PATH in "${TARGET_PATHS[@]}";
 do
 echo "Started Scanning $TARGET_PATH"
