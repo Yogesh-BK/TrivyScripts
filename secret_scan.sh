@@ -12,7 +12,7 @@ do
     echo "Inside $i.${dirs[i]}"
     echo "Started Scanning  $i.${dirs[i]}"
     TARGET_PATH="./${dirs[i]}"
-    echo "TARGET_PATH"
+    echo $TARGET_PATH
     # trivy fs --exit-code 1 $TARGET_PATH
     echo "Completed Scanning $i.${dirs[i]}"
 done
