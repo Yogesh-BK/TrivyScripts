@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "Welcome Yogesh"
 # declare -a dirs
 # i=1
 # for d in */
